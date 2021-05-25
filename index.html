@@ -4,6 +4,7 @@
         <title>Covid-19 WebApp</title>
         <link rel="stylesheet" href="index.css">
         <!-- <script src="index.js"></script> -->
+        <!-- https://eloquent-wing-9dc331.netlify.app/ -->
     </head>
     <body>
         <div id="header">
@@ -15,37 +16,12 @@
                 <button id="searchbtn">Search</button>
             </form>
         </div>
-        <div id="result">
-            <div id="Tcases">
-                <p>Total Cases<br>
-                1000
-            </div>
-            <div id="Tdeaths">
-                Total Deaths<br>
-                100
-            </div>
-            <div id="Trecovered">
-                Total Recovered<br>
-                100
-            </div>
-            <div id="ActiveCases">
-                Active Cases<br>
-                1000
-            </div>
-            <div id="TodayCases">
-                Today Cases<br>
-                100
-            </div>
-            <div id="TodayDeaths">
-                Today Deaths<br>
-                10
-            </div>
-        </div>
+        <div id="result"></div>
     </body>
     <script>
         var countryName=document.getElementById("CountryName");
         var searchbtn=document.getElementById("searchbtn");
-
+        var result=document.getElementById("result");
         searchbtn.addEventListener("click",function (e){
             e.preventDefault();
             var url="https://coronavirus-19-api.herokuapp.com/countries/"+countryName.value;
